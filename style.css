@@ -1,0 +1,324 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    --whitesnow: rgb(238, 238, 238);
+    --gold: rgb(134, 120, 72);
+}
+
+.main-title{
+    width: 100%;
+}
+
+.opening-bar{
+    background-color: rgb(68, 68, 68);
+    height: 1.5rem;
+    width: 100%;
+}
+
+.my-name{
+    padding-top: 1.2rem;
+    padding-bottom: 0.5rem;
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(37, 37, 37);
+}
+
+.my-name > span{
+    color:rgb(94, 94, 94);
+    font-weight: 400;
+}
+
+.header-details{
+    display: flex;
+    justify-content: center;
+}
+
+.header-details div{
+    font-size: 1.2em;
+    padding: 0 2em;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.header-details div:hover{
+    transform: scale(1.1);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(154, 157, 184);
+}
+
+a:hover{
+    color: rgb(229, 229, 233);
+}
+
+.header-details a{
+    color: rgb(78, 78, 78);
+}
+
+.header-details a:hover{
+    color: rgb(36, 37, 39);
+}
+
+.skill-contents{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.programming, .writing, .design{
+    width: 65vw;
+    margin-top: 3rem;
+}
+
+.skill-item{
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.programming .skill-item{
+    background-color: rgb(37, 37, 37);
+}
+
+.programming .skill-item:hover{
+    background-color: rgb(22, 22, 22);
+}
+
+.writing .skill-item{
+    background-color: rgb(63, 70, 80);
+}
+
+.writing .skill-item:hover{
+    background-color: rgb(41, 47, 56);
+}
+
+.design .skill-item{
+    background-color: rgb(199, 199, 199);
+    padding: 0.5em;
+}
+
+.design .skill-item:hover{
+    background-color: rgb(231, 231, 231);
+}
+
+.skill-item-img{
+    width: 100%;
+    height: 15rem;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+.design .skill-item-img{
+    height: 30rem;
+    background-position: top; 
+    background-position: center;
+}
+
+.skill-item-title{
+    font-size: 1.3em;
+    color: rgb(238, 238, 238);
+    font-weight: 300;
+}
+
+.skill-item-description{
+    color: rgb(156, 156, 156);
+    font-weight: 200;
+}
+
+.skill-item-link{
+    padding-top: 0.5em;
+}
+
+.skill-item-lang{
+    margin: 0.5rem 0px;
+    font-weight: 500;
+    padding: 0rem 0.5rem;
+    color: rgb(37, 37, 37);
+    background-color:rgb(238, 238, 238);
+}
+
+.title-content{
+    width: fit-content;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--whitesnow);
+    background-color: var(--gold);
+    padding: 0px 0.5em;
+}
+
+/* Grid Area */
+
+.grid-container{
+    display: grid;
+    grid-gap: 1em;
+    grid-auto-columns: minmax(15em, auto);
+    grid-template-areas:
+    'a a a a'
+    'b c d e';
+}
+
+.programming .title, .writing .title, .design .title{
+    grid-area: a;
+}
+
+.programming .skill-item.one, .writing .skill-item.one, .design .skill-item.one{
+    grid-area: b;
+}
+
+.programming .skill-item.two, .writing .skill-item.two, .design .skill-item.two {
+    grid-area: c;
+}
+
+.programming .skill-item.three, .writing .skill-item.three, .design .skill-item.three{
+    grid-area: d;
+}
+
+.programming .skill-item.four, .writing .skill-item.four, .design .skill-item.four{
+    grid-area: e;
+}
+
+/* Pictures */
+
+.programming .skill-item.one .skill-item-img{
+    background-image: url("1.png");
+}
+
+.programming .skill-item.two .skill-item-img{
+    background-image: url("2.png");
+}
+
+.programming .skill-item.three .skill-item-img{
+    background-image: url("3.png");
+}
+
+.programming .skill-item.four .skill-item-img{
+    background-image: url("4.png");
+}
+
+.design .skill-item.one .skill-item-img{
+    background-image: url("a.jpg");
+}
+
+.design .skill-item.two .skill-item-img{
+    background-image: url("b.jpg");
+}
+
+.design .skill-item.three .skill-item-img{
+    background-image: url("c.jpg");
+}
+
+.design .skill-item.four .skill-item-img{
+    background-image: url("d.jpg");
+}
+
+
+/*   animation  */
+
+.skill-item{
+    transition: 200ms ease-in-out;
+}
+
+.skill-item:hover{
+    transform: scale(1.02);
+}
+
+
+/* Responsive */
+
+@media (max-width: 1600px) {
+
+    .grid-container{
+        display: grid;
+        grid-gap: 1em;
+        grid-auto-columns: minmax(15vw, auto);
+        grid-template-areas:
+        'a a a a'
+        'b b c c'
+        'd d e e'
+        ;
+    }
+  }
+
+  @media (max-width: 1000px) {
+
+    .programming, .writing, .design{
+        width: 90vw;
+    }
+
+    .header-details div{
+        font-size: 1em;
+        padding: 0 0.7em;
+    }
+  }
+
+  @media (max-width: 720px) {
+
+    .grid-container{
+        display: grid;
+        grid-gap: 1em;
+        grid-auto-columns: minmax(15vw, auto);
+        grid-template-areas:
+        'a a a a'
+        'b b b b'
+        'c c c c'
+        'd d d d'
+        'e e e e'
+        ;
+    }
+
+    .header-details{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-details div{
+        margin-top: 0.5em;
+    }
+
+    .title-content{
+        width: 100%;
+        font-size: 1.7em;
+    }
+
+    .my-name{
+        font-size: 3rem;
+    }
+
+    .header-details div{
+        font-size: 0.8em;
+        font-weight: 500;
+        padding: 0 0.5em;
+    }
+  }
+
+
